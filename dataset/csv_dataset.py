@@ -5,7 +5,7 @@ from numpy import asarray
 
 
 def save_dataset():
-    image = Image.open('photos/car_updated.png')
+    image = Image.open('')
     image_sequence = asarray(image)
 
     writer = csv.writer(open('dataset.csv', 'w', newline=''))
@@ -13,5 +13,6 @@ def save_dataset():
 
     data = numpy.genfromtxt('dataset.csv', dtype=int, delimiter=',')
     return data
+
 
 save_dataset()
